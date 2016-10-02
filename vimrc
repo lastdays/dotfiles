@@ -11,15 +11,28 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'kien/ctrlp.vim'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-commentary'
+Plugin 'morhetz/gruvbox'
+
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+
 
 syntax enable
-colorscheme monokai
+colorscheme gruvbox
 set relativenumber
 set number
 
 set expandtab
 set shiftwidth=2
 set softtabstop=2
+
+set background=dark
 
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
