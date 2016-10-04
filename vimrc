@@ -18,6 +18,9 @@ Plugin 'tpope/vim-commentary'
 Plugin 'morhetz/gruvbox'
 Plugin 'vim-airline/vim-airline'
 Plugin 'nanotech/jellybeans.vim'
+Plugin 'thoughtbot/vim-rspec'
+Plugin 'christoomey/vim-tmux-runner'
+Plugin 'tpope/vim-dispatch'
 
 
 " All of your Plugins must be added before the following line
@@ -45,3 +48,13 @@ set splitbelow
 set splitright
 set laststatus=2
 set scrolloff=4
+
+let mapleader = "\<Space>"
+nnoremap <leader>irb :VtrOpenRunner {'orientation': 'h', 'percentage': 50, 'cmd': 'irb'}<cr>
+
+let g:rspec_command = "Dispatch rspec {spec}"
+
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
