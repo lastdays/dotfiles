@@ -21,6 +21,9 @@ Plugin 'nanotech/jellybeans.vim'
 Plugin 'thoughtbot/vim-rspec'
 Plugin 'christoomey/vim-tmux-runner'
 Plugin 'tpope/vim-dispatch'
+Plugin 'jiangmiao/auto-pairs'
+Plugin 'tpope/vim-endwise'
+
 
 
 " All of your Plugins must be added before the following line
@@ -36,6 +39,8 @@ set number
 set expandtab
 set shiftwidth=2
 set softtabstop=2
+set backspace=2
+set tabstop=2
 
 set background=dark
 
